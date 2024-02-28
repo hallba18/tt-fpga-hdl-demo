@@ -328,7 +328,7 @@ logic [0:0] FpgaPins_Fpga_CALC_valid_or_reset_a1;
                      assign FpgaPins_Fpga_CALC_reset_a0 = reset;
                      assign FpgaPins_Fpga_CALC_equals_in_a0 = ui_in[7];
                   //_@1
-                     assign FpgaPins_Fpga_CALC_valid_a1[0:0] = (~(FpgaPins_Fpga_CALC_reset_a1) && FpgaPins_Fpga_CALC_equals_in_a1 && ~(FpgaPins_Fpga_CALC_equals_in_a2)) ? (FpgaPins_Fpga_CALC_valid_a2 + 1) : 0;
+                     assign FpgaPins_Fpga_CALC_valid_a1[0:0] = (~(FpgaPins_Fpga_CALC_reset_a1) && FpgaPins_Fpga_CALC_equals_in_a1 && ~(FpgaPins_Fpga_CALC_equals_in_a2)) ? 1 : 0;
                      assign FpgaPins_Fpga_CALC_valid_or_reset_a1[0:0] = FpgaPins_Fpga_CALC_reset_a1 | FpgaPins_Fpga_CALC_valid_a1;
                      assign FpgaPins_Fpga_CALC_val1_a1[7:0] = FpgaPins_Fpga_CALC_out_a3;
                      assign FpgaPins_Fpga_CALC_val2_a1[7:0] = ui_in[3:0];
